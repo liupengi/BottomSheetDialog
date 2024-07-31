@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        val mBottomSheetDialog = BottomSheetDialog(this,easemob.com.bottomsheetdialog.R.style.BottomSheetDialog)
+        val mBottomSheetDialog = BottomSheetDialog(this,R.style.BottomSheetDialog)
         val binding: DialogBottomNewBinding = DialogBottomNewBinding.inflate(layoutInflater)
         val view = binding.root
         view.let { mBottomSheetDialog.setContentView(it) }
