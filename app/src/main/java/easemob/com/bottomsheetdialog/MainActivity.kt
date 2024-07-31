@@ -21,10 +21,12 @@ class MainActivity : ComponentActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        val mBottomSheetDialog = BottomSheetDialog(this)
+        val mBottomSheetDialog = BottomSheetDialog(this,easemob.com.bottomsheetdialog.R.style.BottomSheetDialog)
         val binding: DialogBottomNewBinding = DialogBottomNewBinding.inflate(layoutInflater)
         val view = binding?.root
         view?.let { mBottomSheetDialog.setContentView(it) }
+        //设置点击dialog外部不消失
+        mBottomSheetDialog.setCanceledOnTouchOutside(false)
         mBottomSheetDialog.show()
     }
 }
